@@ -10,6 +10,13 @@ Feature: User
     Then I received valid HTTP response code 200
     And I received valid data for detail user
 
+  @positiveGetnewBranch
+  Scenario: GET valid - As admin I have be able to get detail user new branch
+    Given I set GET api endpoints new branch
+    When I send GET HTTP request new branch
+    Then I received valid HTTP response code 200 new branch
+    And I received valid data for detail user new branch
+
   @negativeGet
   Scenario: GET invalid - As admin I not have be able to get detail user
     Given I set GET api invalid endpoints

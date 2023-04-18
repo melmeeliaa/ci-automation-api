@@ -31,6 +31,8 @@ public class UserSteps {
     Delete delete;
     @Steps
     DeleteN deleteN;
+    @Steps
+    GetNewBranch getNB;
     @Given("I set GET api endpoints")
     public void iSetGETApiEndpoints() {
         get.iSetGETApiEndpoints();
@@ -197,5 +199,21 @@ public class UserSteps {
     @Then("I received invalid HTTP response code {int} delete")
     public void iReceivedInvalidHTTPResponseCodeDelete(int arg0) {
         deleteN.iReceivedInvalidHTTPResponseCodeDelete();
+    }
+
+    @Given("I set GET api endpoints new branch")
+    public void iSetGETApiEndpointsNewBranch() { getNB.iSetGETApiEndpoints();
+    }
+
+    @When("I send GET HTTP request new branch")
+    public void iSendGETHTTPRequestNewBranch() { getNB.iSendGETHTTPRequest();
+    }
+
+    @Then("I received valid HTTP response code {int} new branch")
+    public void iReceivedValidHTTPResponseCodeNewBranch(int arg0) { getNB.iReceivedValidHTTPResponseCode200();
+    }
+
+    @And("I received valid data for detail user new branch")
+    public void iReceivedValidDataForDetailUserNewBranch() { getNB.iReceivedValidDataForDetailUser();
     }
 }
