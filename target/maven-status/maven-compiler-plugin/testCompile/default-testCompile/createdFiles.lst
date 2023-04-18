@@ -1,0 +1,12 @@
+starter\user\PutN.class
+starter\user\Put.class
+starter\user\GetIDN.class
+starter\user\PostN.class
+starter\user\Delete.class
+starter\user\Get.class
+starter\user\GetID.class
+starter\user\Post.class
+starter\CucumberTestSuite.class
+starter\stepdefinitions\UserSteps.class
+starter\user\DeleteN.class
+starter\user\GetN.class
